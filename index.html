@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capybara Community</title>
+  <style>
+    @font-face {
+      font-family: 'CapyFont';
+      src: url('font.ttf') format('truetype');
+    }
+    
+    .customFont {
+      font-family: 'CapyFont', sans-serif;
+    }
+    
+    .helveticaText {
+      font-family: Helvetica, sans-serif;
+    }
+    
+    /* Keep everything else the same */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #introOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #introOverlay h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #introOverlay p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #startButton {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff914d;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #startButton:hover {
+      background-color: #ff7733;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+
+  <div id="introOverlay">
+    <div>
+      <h1 class="customFont">Welcome to the Capybara Community</h1>
+<p class="helveticaText">
+       Capybaras thrive in communities, and so does your screen. Over time, more friends appear,
+        filling the space with fuzzy vibes and good energy. This is a reflection of how we all need connection. And just like life, when things get full,
+        we reset. Not to start over, but to start fresh.
+</p>
+      </p>
+      <button id="startButton" onclick="document.getElementById('introOverlay').style.display = 'none';">
+        Let them thrive
+      </button>
+    </div>
+  </div>
+  
+
+</body>
+</html>
